@@ -1,0 +1,31 @@
+{
+  "name": "demo",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-hooks-rxjs": "../",
+    "react-scripts": "4.0.3",
+    "rxjs": "^7.3.0"
+  },
+  "scripts": {
+    "start": "yarn build:plugin && react-scripts start",
+    "build": "yarn build:plugin && react-scripts build",
+    "build:plugin": "cd .. && yarn build && cd demo && yarn remove react-hooks-rxjs && yarn add ../"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
